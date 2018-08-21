@@ -36,15 +36,16 @@ class CsvParserSuite extends FunSuite {
 
   test("Multiple valid CSV lines should be parsed successfully") {
     val lines= List(
-      "?,(Sat) 19 Aug 2017 (33),Juventus (1),3-0,2-0,Cagliari Calcio (1)",
+      "Round,Date,Team 1,FT,HT,Team 2",
       "?,(Sat) 26 Aug 2017 (34),Benevento (2),0-1,0-0,Bologna FC (2)",
       "?,(Sat) 26 Aug 2017 (34),AS Roma (2),1-3,1-0,FC Internazionale Milano (2)"
     )
 
     val games = CsvParser.parseFile(lines)
     assert(games.isSuccess)
-    assert(games.get.size === 3)
+    assert(games.get.size === 2)
   }
+
 
   test("Multiple CSV lines having at least one invalid line should give an error") {
     val lines= List(
