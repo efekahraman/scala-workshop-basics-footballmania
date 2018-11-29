@@ -12,8 +12,7 @@ class TeamStatsSuite extends FunSuite {
     )
 
     val homeGames = TeamStats(list).homeGames("Juventus")
-    assert(homeGames.isDefined)
-    assert(homeGames.get.size === 2)
+    assert(homeGames.size === 2)
   }
 
   test("Away matches should be aggregated successfully") {
@@ -24,8 +23,7 @@ class TeamStatsSuite extends FunSuite {
     )
 
     val awayGames = TeamStats(list).awayGames("ACF Fiorentina")
-    assert(awayGames.isDefined)
-    assert(awayGames.get.size === 2)
+    assert(awayGames.size === 2)
   }
 
   test("All matches should be aggregated successfully") {
@@ -37,8 +35,7 @@ class TeamStatsSuite extends FunSuite {
     )
 
     val allGames = TeamStats(list).allGames("Juventus")
-    assert(allGames.isDefined)
-    assert(allGames.get.size === 3)
+    assert(allGames.size === 3)
   }
 
   test("All matches should be aggregated successfully when only home matches are given") {
@@ -49,8 +46,7 @@ class TeamStatsSuite extends FunSuite {
     )
 
     val allGames = TeamStats(list).allGames("Juventus")
-    assert(allGames.isDefined)
-    assert(allGames.get.size === 2)
+    assert(allGames.size === 2)
   }
 
   test("All matches should be aggregated successfully when only away matches are given") {
@@ -60,8 +56,7 @@ class TeamStatsSuite extends FunSuite {
     )
 
     val allGames = TeamStats(list).allGames("Juventus")
-    assert(allGames.isDefined)
-    assert(allGames.get.size === 1)
+    assert(allGames.size === 1)
   }
 
   test("An unknown team's aggregation should return empty") {
