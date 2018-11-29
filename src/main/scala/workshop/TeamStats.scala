@@ -2,11 +2,11 @@ package workshop
 
 class TeamStats(/* ??? */) {
 
-  def homeGames(team: String): Option[List[Game]] = ???
+  def homeGames(team: String): List[Game] = ???
 
-  def awayGames(team: String): Option[List[Game]] = ???
+  def awayGames(team: String): List[Game] = ???
 
-  def allGames(team: String): Option[List[Game]] = ???
+  def allGames(team: String): List[Game] = ???
 
 }
 

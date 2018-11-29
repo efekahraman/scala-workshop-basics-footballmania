@@ -6,9 +6,15 @@ import scala.util.{Failure, Success, Try}
 
 object Main extends App {
 
+  trait Location
+  case object Home extends Location
+  case object Away extends Location
+
+  def getLocation(location: String): Try[Location] = ???
+
   def buildStats: Try[TeamStats] = ???
 
-  def query(stats: TeamStats, team: String, attribute: String): Try[List[Game]] = ???
+  def query(stats: TeamStats, team: String, location: Location): Try[List[Game]] = ???
 
   def readArg(index: Int): Try[String] = ???
 
