@@ -14,7 +14,7 @@ object Main extends App {
 
   def buildStats: Try[TeamStats] = ???
 
-  def query(stats: TeamStats, team: String, location: Location): Try[List[Game]] = ???
+  def query(stats: TeamStats, team: String, location: Location): List[Game] = ???
 
   def readArg(index: Int): Try[String] = ???
 
